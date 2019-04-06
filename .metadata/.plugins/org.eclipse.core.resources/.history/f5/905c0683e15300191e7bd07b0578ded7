@@ -1,0 +1,35 @@
+package com.braindata.operation;
+
+import java.util.Scanner;
+
+import com.braindata.model.Account;
+
+public class operation {
+
+Scanner sc=new Scanner(System.in);
+Account a=new Account();
+public void createaccount()
+{
+	System.out.println("Enter your account number:");
+	String ac=sc.next();
+	a.setAccountNo(ac);
+	System.out.println("Enter your name:");
+	String nm=sc.next();
+	a.setName(nm);
+	System.out.println("Enter your address:");
+	String adr=sc.next();
+	a.setAddress(adr);
+	System.out.println("Enter your mobile number:");
+	long mbl=sc.nextLong();
+	a.setMobileNo(mbl);
+	while(true)
+	{
+		
+	
+	System.out.println("Enter your age:");
+	int ag=sc.nextInt();
+	
+	}
+	
+}
+}

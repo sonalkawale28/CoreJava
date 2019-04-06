@@ -1,0 +1,34 @@
+
+public class Company {
+private int cid;
+private String cityname;
+private Address caddress;
+
+
+public void setCid(int cid) 
+{
+	this.cid = cid;
+}
+public int getCid() 
+{
+	return cid;
+}
+
+public void setCityname(String cityname) 
+{
+	this.cityname = cityname;
+}
+public String getCityname()
+{
+	return cityname;
+}
+
+public void setCaddress(Address caddress) 
+{
+	this.caddress = caddress;
+}
+public Address getCaddress() 
+{
+	return caddress;
+}
+}

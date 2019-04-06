@@ -1,0 +1,9 @@
+package com.braindata.operation;
+
+import java.util.Scanner;
+
+public class operation {
+
+Scanner sc=new Scanner(System.in);
+Account a=new Account();
+}

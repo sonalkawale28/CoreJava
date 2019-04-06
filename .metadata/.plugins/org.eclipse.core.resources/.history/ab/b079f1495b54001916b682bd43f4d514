@@ -1,0 +1,27 @@
+
+public class Test {
+public static void main(String[] args) {
+	{
+		Address a=new Address();
+		a.setAreaname("warje");
+		a.setCityname("pune");
+		a.setPincode(411058);
+		
+		Address adr=new Address();
+		adr.setCaddress("Hinjewadi");
+		
+		
+		
+		Company c=new Company();
+		c.setCid(101);
+		c.setCname("TCS");
+		c.setCaddress(adr);
+		
+		Employee e=new Employee();
+		e.setEid(1);
+		e.setEname("sonal");
+		e.setAddress(a);
+		e.setCname(c);
+	}
+}
+}

@@ -1,0 +1,11 @@
+package com.braindata.test;
+
+import java.util.Scanner;
+
+public class Test {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	Operation o=new Operation();
+	System.out.println("1.Create account\n2.dispaay money\n3.add money\n4.withdrawl money\n5.");
+}
+}

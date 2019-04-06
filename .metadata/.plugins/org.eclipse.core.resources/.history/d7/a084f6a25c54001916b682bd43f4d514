@@ -1,0 +1,40 @@
+
+public class Test {
+public static void main(String[] args) 
+	{
+		Address a=new Address();
+		a.setAreaname("warje");
+		a.setCityname("pune");
+		a.setPincode(411058);
+		
+		Address adr=new Address();
+		adr.setAreaname("Hinjewadi");
+		adr.setCityname("pune");
+		adr.setPincode(410084);
+		
+		
+		
+		Company c=new Company();
+		c.setCid(101);
+		c.setCname("TCS");
+		c.setCaddress(adr);
+		
+		Employee e=new Employee();
+		e.setEid(1);
+		e.setEname("sonal");
+		e.setAddress(a);
+		e.setCname(c);
+		
+		System.out.println(e.getEid());
+		System.out.println(e.getEname());
+		System.out.println(e.getAddress().getAreaname());
+		System.out.println(e.getAddress().getCityname());
+		System.out.println(e.getAddress().getPincode());
+		System.out.println(e.getCname().getCid());
+		System.out.println(e.getCname().getCname());
+		System.out.println(e.getCname().getCaddress());
+	}
+}
+		
+		
+	

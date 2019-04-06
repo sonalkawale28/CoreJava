@@ -1,0 +1,161 @@
+package com.braindata.operation;
+
+import java.util.Scanner;
+
+import com.braindata.model.Account;
+
+public class Operation {
+	Scanner sc=new Scanner(System.in);
+	Account a=new Account();
+	public void createAccount()
+	{
+		System.out.println("enter your Account no:");
+		String acnt = sc.next();
+		a.setAccountNo(acnt);
+		System.out.println("enter your Name:");
+		String nm=sc.next();
+		a.setName(nm);
+		System.out.println("Enter your permanant Address:");
+		String adr=sc.next();
+		a.setAddress(adr);
+		System.out.println("Enter your Mobile no:");
+		long mbl=sc.nextLong();
+		a.setMobileNo(mbl);
+		while(true)
+		{
+		System.out.println("Enter your Age:");
+		int ag=sc.nextInt();
+		
+		if(ag<18)
+		{
+			System.out.println("You are not eligible to create account");
+			System.out.println("Enter correct age");
+		}
+		else
+		{
+			a.setAge(ag);
+			break;
+		}
+		
+		}
+		System.out.println("Enter your Gender:");
+		while(true)
+		{
+			
+		String gd=sc.next();
+		
+		String male="M";
+		String female="F";
+		if(male.equals(gd))
+		{
+			//System.out.println("Gender is:"+gd);
+			a.setGender(gd);
+			break;
+			
+		}
+		else if(female.equals(gd))
+		{
+			//System.out.println("Gender is:"+gd);
+			a.setGender(gd);
+			break;
+			
+		}
+		else
+		{
+			System.out.println("Invalid gender");
+			System.out.println("Enter your gender:");
+		
+		}
+	
+		}
+		
+		while(true)
+		{
+		System.out.println("Enter the amount you want to deposite:");
+		double dp=sc.nextDouble();
+		
+		if(dp<500)
+		{
+			System.out.println("your deposite ammount should be atleast 500Rs.");
+			System.out.println("Please enter the sufficient amount");
+		}
+		else
+		{
+			a.setBalance(dp);
+			break;
+		
+	}
+		}
+	}
+	
+	public void dispaybalance()
+	{
+		System.out.println("Enter your Account no:");
+		String userin=sc.next();
+		String ano=a.getAccountNo();
+		if(userin.equals(ano))
+		{
+			System.out.println("Display Balance"+a.getBalance());
+			
+		}
+		else
+		{
+			System.out.println("First create your account");
+		}
+		
+		
+	}
+	
+	public void addmoney()
+	{
+		System.out.println("Enter your Account no:");
+	String userin=sc.next();
+	String ano=a.getAccountNo();
+	if(userin.equals(ano))
+	{
+		System.out.println("Display Balance"+a.getBalance());
+		
+	}
+	else
+	{
+		System.out.println("First create your account");
+	}
+		double oldmoney=a.getBalance();
+		System.out.println("Enter ammount you want to add");
+		double bal=sc.nextDouble();
+		double newbalance=oldmoney+bal;
+		
+		a.setBalance(newbalance);
+		System.out.println("your account balance "+a.getBalance());
+		
+	}
+	 public void withdrawlmoney()
+	 {
+		 System.out.println("enter ammount you want to withdrawl");
+		 double amt=sc.nextDouble();
+		 	double newamt = a.getBalance()-amt;
+		 	 if(newamt<500) {
+		 		 System.out.println("you have Insufficient balance");
+		 		System.out.println("Please enter correct amount");
+		 	 }
+		 	 else {
+		 		 a.setBalance(newamt);
+		 		 System.out.println("Withdran sucessfully");
+		 		System.out.println("Your new available account balance is:"+a.getBalance());
+		 		
+		 	 }
+		 	 
+	 }
+	public void displayAccountDetails()
+	{
+		System.out.println(a.getAccountNo());
+		System.out.println(a.getName());
+		System.out.println(a.getAddress());
+		System.out.println(a.getMobileNo());
+		System.out.println(a.getAge());
+		System.out.println(a.getGender());
+		System.out.println(a.getBalance());
+		
+	}
+
+}

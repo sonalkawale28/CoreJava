@@ -1,0 +1,23 @@
+package com.braindata.test;
+
+import java.util.Scanner;
+
+import com.braindata.operation.Operation;
+
+public class Test {
+public static void main(String[] args) {
+	
+	Operation o=new Operation();
+	Scanner sc=new Scanner(System.in);
+	while(true)
+	{
+	System.out.println("1.Create account\n2.Display balance\n3.Add money\n4.Withdrawl money\n5.Display Account Details\n ");
+	System.out.println("Enter your choice:");
+	int choice=sc.nextInt();
+	switch(choice)
+	{
+	
+	}
+	}
+}
+}

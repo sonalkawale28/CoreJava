@@ -1,0 +1,85 @@
+package com.braindata.operation;
+
+import java.util.Scanner;
+
+import com.braindata.model.Account;
+
+public class Operation {
+
+	Account a=new Account();
+	Scanner sc=new Scanner(System.in);
+	
+	public void createaccount()
+	{
+		System.out.println("Enter your account number:");
+		String ac=sc.next();
+		a.setAccountNo(ac);
+		System.out.println("Enter your name:");
+		String nm=sc.next();
+		a.setName(nm);
+		System.out.println("Enter your address:");
+		String adr=sc.next();
+		a.setAddress(adr);
+		System.out.println("Enter your mobile number:");
+		long mbl=sc.nextLong();
+		a.setMobileNo(mbl);
+		
+		while(true)
+		{
+		System.out.println("Enter your age:");
+		int ag=sc.nextInt();
+		if(ag>=18)
+		{
+			a.setAge(ag);
+		     break;	
+		}
+		else
+		{
+			System.out.println("sorry!!Invalid age");
+			System.out.println("Age should be more than or equal to 18 years");
+			
+		}
+		
+		}
+		
+		while(true)
+		{
+			System.out.println("Enter your gender:");
+			String gen=sc.next();
+			String male="M";
+			String female="F";
+			if(male.equals(gen))
+			{
+				a.getAge(gen);
+				break;
+			}
+			else if(female.equals(gen))
+			{
+				a.setAge(gen);
+				break;
+			}
+			else
+			{
+				System.out.println("");
+			}
+		}
+		
+		
+	}
+	public void displaybalance()
+	{
+		
+	}
+	public void addmoney()
+	{
+		
+	}
+	public void withdrawlmoney()
+	{
+		
+	}
+	public void displayAccountDetails()
+	{
+		
+	}
+}

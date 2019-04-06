@@ -1,0 +1,32 @@
+package com.braindata.operation;
+
+import java.util.Scanner;
+
+import com.braindata.model.Account;
+
+public class Operation {
+
+	Account a=new Account();
+	Scanner sc=new Scanner(System.in);
+	
+	public void createaccount()
+	{
+		System.out.println("hi");
+	}
+	public void displaybalance()
+	{
+		
+	}
+	public void addmoney()
+	{
+		
+	}
+	public void withdrawlmoney()
+	{
+		
+	}
+	public void displayAccountDetails()
+	{
+		
+	}
+}

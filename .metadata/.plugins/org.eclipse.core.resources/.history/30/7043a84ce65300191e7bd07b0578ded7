@@ -1,0 +1,38 @@
+package com.braindata.test;
+
+import java.util.Scanner;
+public class Test {
+public static void main(String[] args) {
+	
+while(true)
+{
+	Scanner sc=new Scanner(System.in);
+	Operation o=new Operation();
+	System.out.println("1.Create account\n2.dispaay money\n3.add money\n4.withdrawl money\n5.Display account details\n");
+	System.out.println("Enter your choice:");
+	int choice=sc.nextInt();
+	switch(choice)
+	{
+	case 1:
+		o.createaccount();
+		System.out.println("account created successfully");
+		break;
+		
+	case 2:
+		o.displaybalance();
+		break;
+	case 3:
+		o.addmoney();
+		break;
+	case 4:
+		o.withdrawlmoney();
+		break;
+	case 5:
+		o.displayaccountdetails();
+		break;
+	default:
+		System.out.println("wrong choice selected");
+}
+}
+}
+}

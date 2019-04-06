@@ -1,0 +1,22 @@
+package setter_getter;
+
+public class Emptest {
+public static void main(String[] args) {
+	Employee e=new Employee();
+			e.setEmpId(1);
+			e.setEname("sonal");
+			e.setDepartment("electronics");
+			e.setSalary(50000.00d);
+			e.setMobileNo(8329242328l);
+			e.setRating(4.0f);
+			e.setStatus(true);
+	Employee e1=new Employee();
+	e1.setEmpId(2);
+	e1.setEname("pankaj");
+	e1.setDepartment("computer");
+	e1.setSalary(90000.00d);
+	e1.setMobileNo(8329242329l);
+	e1.setRating(4.2f);
+	e1.setStatus(true);
+}
+}
